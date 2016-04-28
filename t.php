@@ -1,7 +1,11 @@
 <?php
 
-$name = $argv[1];
+if($argc != 2 && !isset($argv[1])){
+	echo "USAGE : php t.php <ext_name>\n";
+	exit();
+}
 
+$name = $argv[1];
 @mkdir($name);
 @mkdir($name . "/items/");
 
